@@ -10,7 +10,5 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 COPY .gitignore .
-COPY on_start.sh .
-RUN chmod +x on_start.sh
 
 CMD [ "/bin/bash" ]
