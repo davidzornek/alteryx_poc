@@ -3,6 +3,7 @@ import io
 import requests
 from schema import Schema, Literal
 
+from griptape.artifacts import TextArtifact
 from griptape.tools import BaseTool
 from griptape.utils.decorators import activity
 from llama_index import GPTVectorStoreIndex, Document
@@ -37,7 +38,7 @@ class SRDVectors(BaseTool):
 
     @activity(
         config={
-            "description": "Use this whenever you need information about D&D 5e.",
+            "description": "Use this tool ONLY to answer questions about dungeions and dragons fifth edition.",  # noqa
             "schema": Schema(
                 {
                     Literal(
@@ -50,4 +51,4 @@ class SRDVectors(BaseTool):
     )
     def query_srd_vectors(self, params: dict) -> str:
         query_str = params["values"]["query"]
-        return self.query_engine.query(query_str).response
+        return TextArtifact(self.query_engine.query(query_str).response)
