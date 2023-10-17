@@ -1,0 +1,5 @@
+version: "v1"
+name: 5e SRD Vector Store
+description: Tool for getting D&D 5e rules.
+contact_email: david.zornek@gmail.com
+legal_info_url: https://www.griptape.ai/legal
