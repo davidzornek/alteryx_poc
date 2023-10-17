@@ -8,4 +8,4 @@ pyopenssl==23.2.0
 pre-commit==3.5.0
 pinecone-client==2.2.4
 PyMuPDF==1.23.5
-llama-index====0.8.45.post1
+llama-index==0.8.45.post1
