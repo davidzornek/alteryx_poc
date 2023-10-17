@@ -5,8 +5,6 @@ from typing import Callable
 from griptape.tasks import ToolkitTask, ActionSubtask, PromptTask
 from griptape.utils import minify_json
 
-# import griptape.utils as gt_utils
-
 from alteryx_poc.utils.j2 import J2
 
 
