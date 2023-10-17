@@ -31,7 +31,7 @@ INDEX = GPTVectorStoreIndex.from_documents(
 
 
 class SRDVectors(BaseTool):
-    def __init__(**kwargs):
+    def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.query_engine = INDEX.as_query_engine()
 
